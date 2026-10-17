@@ -1,0 +1,22 @@
+name: macOS checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  swift:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Build
+        run: swift build --product PromptOptimizer
+      - name: Behavioral and loopback HTTP checks
+        run: swift run OptimizerChecks
+      - name: Script validation
+        run: |
+          bash -n scripts/build-app.sh scripts/build-dmg.sh scripts/install-app.sh
+          python3 -c "import ast,pathlib; [ast.parse(p.read_text()) for p in pathlib.Path('scripts').glob('*.py')]"

@@ -1,0 +1,14 @@
+.build/
+dist/
+*.log
+.DS_Store
+.env
+.env.*
+config.json
+Signing/
+*.keychain*
+*.pem
+*.p12
+*.key
+验证记录.md
+人工验收.md
