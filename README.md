@@ -2,6 +2,16 @@
 
 把输入框里的需求，一键改成更清楚的提示词。为 **Codex 桌面**和 **Claude 桌面（含 Code 模式）**设计的 macOS 悬浮助手，不自动发送聊天。
 
+## ⬇️ 下载 Mac 安装包（DMG）
+
+### [点击下载 Prompt Optimizer · v0.6.0-beta.1](https://github.com/alonmidsnow/prompt-optimizer/releases/download/v0.6.0-beta.1/PromptOptimizer.dmg)
+
+**适用：Apple 芯片（M 系列）Mac，macOS 13+。** Intel / Windows 不支持。当前是**未经过 Apple 公证的 Beta 测试包**。
+
+下载 DMG → 打开 → 把 App 拖入“应用程序” → 启动并授权辅助功能 → 使用自己的 Codex CLI 登录或配置模型 API。
+
+[查看版本说明与全部下载文件](https://github.com/alonmidsnow/prompt-optimizer/releases/tag/v0.6.0-beta.1) · [SHA-256 校验文件](https://github.com/alonmidsnow/prompt-optimizer/releases/download/v0.6.0-beta.1/PromptOptimizer.dmg.sha256) · [详细安装步骤](#安装和第一次使用)
+
 受 WorkBuddy 提示词优化交互启发的独立开源实现。没有附带 WorkBuddy 源码、私有提示词、图标或账号数据，不调用其私有接口；与 OpenAI、Anthropic、WorkBuddy 无官方隶属关系。
 
 **状态：0.6.0-beta.1 / MIT / macOS 13+。** 当前 DMG 为 Apple 芯片版本、未经 Apple 公证的测试包；终端 Claude Code、Codex CLI 的交互输入区尚未支持。跨机器安装、原生撤销及真实 API 服务仍需分别验收，不能把自动检查当作全部真实环境通过。
@@ -28,7 +38,7 @@
 
 ## 安装和第一次使用
 
-1. 从本仓库 [Releases](https://github.com/alonmidsnow/prompt-optimizer/releases) 选择测试包（若有发布），或按下文从源码构建。
+1. 点击页首的 **“下载 Mac 安装包（DMG）”**，或从 [Releases](https://github.com/alonmidsnow/prompt-optimizer/releases) 选择对应版本；也可按下文从源码构建。
 2. 打开 DMG，把 **Codex提示词助手.app** 拖进 **Applications**，从应用程序启动，勿从 DMG 内直接运行。也支持 `~/Applications`；只保留一个运行实例。
 3. 按系统提示，在“隐私与安全性 → 辅助功能”中允许这个助手控制输入框。系统验证由你自己完成。
 4. 默认要求本机已有登录的 Codex CLI。没有 CLI 时按“模型配置”切换到 API。
